@@ -2,20 +2,49 @@
 
 ### Deutsch lernen mit M. Umer
 
-PGNX – Pak-German Nexus is a digital German language learning project
-created and maintained by **M. Umer**.
+**PGNX – Pak-German Nexus** is a student community that supports
+students who are planning to study in Germany.
 
-The platform is designed to provide structured and practical German
-learning materials for students and German language learners.
+The community provides guidance and peer support on different aspects
+of the Germany study journey, including study-visa related information,
+waiting-list updates, university-related guidance, and preparation for
+life in Germany.
+
+The community includes students from Pakistan and Germany, with
+dedicated groups for different German cities.
 
 ---
 
-## 📚 What is PGNX?
+## 🇩🇪 What is PGNX?
 
-PGNX is an educational project focused on making German learning
-simple, structured and practical.
+PGNX is a student community built around mutual support and guidance.
 
-The platform may include:
+Students help each other by sharing experiences, information and
+updates related to studying and moving to Germany.
+
+The community includes:
+
+- 🎓 Germany study and university guidance
+- 🇩🇪 Study-visa related guidance and discussions
+- 📋 Visa waiting-list tracking and updates
+- 🏫 University and admission related discussions
+- 🇵🇰 Pakistan-based student groups, including Islamabad and Karachi
+- 🏙️ City-based groups for different cities in Germany
+- 🤝 Peer-to-peer support between students
+- 📢 Important updates and announcements
+- 💬 Student discussions and experience sharing
+
+---
+
+## 📚 Free German Learning Initiative
+
+As part of the PGNX community, we have also started a
+**free German language learning initiative** for community members.
+
+The aim is to help students begin learning German before and during
+their journey to Germany.
+
+The learning platform may include:
 
 - 🇩🇪 German language lessons
 - 📚 A1 learning materials
@@ -25,44 +54,71 @@ The platform may include:
 - 📅 Everyday German topics
 - 🎯 Structured learning activities
 
+The German lessons are conducted free of cost for students in the
+community.
+
 ---
 
-## 👨‍🏫 Creator
+## 👨‍💼 Community Administration
 
 **M. Umer**
 
 German Language Instructor  
-Founder / Creator of the PGNX learning project
+PGNX Community Admin & Moderator
 
-PGNX · Pak-German Nexus
+Within the PGNX community, I contribute as:
 
----
+- 🇩🇪 German Group Admin
+- 🏙️ City Group Admin
+- 📱 Facebook Group Admin / Moderator
+- 📚 German Language Instructor
 
-## 📖 Educational Purpose
-
-PGNX is developed to support German learners with accessible,
-structured and practical learning resources.
-
-The content is organized step by step so that students can gradually
-develop their German language skills.
+I conduct the German-learning initiative for PGNX community members
+and contribute to student guidance and community activities.
 
 ---
 
-## © Copyright
+## 🌍 PGNX Community Network
+
+PGNX brings together students from Pakistan and Germany.
+
+The community has groups based around different German cities, allowing
+students who are already in Germany and those preparing to move there
+to connect with each other.
+
+These city-based groups provide a space for students to share
+experiences, practical information and support related to their
+respective cities.
+
+---
+
+## 📖 Purpose of This Learning Platform
+
+This website is part of the PGNX community's free German-learning
+initiative.
+
+Its purpose is to provide students with a structured place where they
+can learn German step by step, practise regularly and improve their
+language skills.
+
+The platform is intended as an educational resource for PGNX community
+members and other German learners.
+
+---
+
+## © Copyright & Ownership
 
 **© 2026 PGNX · Pak-German Nexus**
 
-Created and maintained by **M. Umer**.
+German-learning materials and website content created specifically for
+this platform are maintained by **M. Umer** as part of the PGNX
+community's German-learning initiative.
 
-All rights reserved.
+The PGNX name and community identity belong to the PGNX community.
 
-Original educational content, lessons, branding, website content,
-graphics and learning materials are protected by applicable copyright
-laws unless otherwise stated.
-
-No permission is granted to reproduce, redistribute, modify or
-republish the original PGNX educational materials or branding without
-appropriate authorization.
+Original educational content, lessons, website content, graphics and
+learning materials on this platform may not be reproduced, redistributed
+or republished without appropriate permission, unless otherwise stated.
 
 ---
 
@@ -70,4 +126,6 @@ appropriate authorization.
 
 **Pak-German Nexus**
 
-Deutsch lernen · Üben · Fortschritt machen
+Student Community · Germany Guidance · German Learning
+
+**Deutsch lernen · Üben · Fortschritt machen**
