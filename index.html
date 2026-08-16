@@ -7,197 +7,552 @@
   <title>PGNX · Deutsch Lernen mit M. Umer</title>
 
   <style>
+    :root {
+      --black: #202020;
+      --black-soft: #3d3d3d;
+
+      --red: #b21f2d;
+      --red-dark: #8f1723;
+
+      --gold: #c8a951;
+      --gold-soft: #e3d49c;
+
+      --green: #285943;
+      --green-dark: #1d4030;
+
+      --cream: #f5f2ea;
+      --cream-light: #fbfaf6;
+      --white: #ffffff;
+
+      --line: #ded9cd;
+
+      --shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f4ee;
-      color: #1c2128;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
     }
 
     .wrap {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: auto;
     }
 
+    /* ================= HEADER ================= */
+
     header {
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
-      background: white;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav {
+      min-height: 78px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
     }
 
-    .logo {
-      font-size: 22px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 21px;
       font-weight: bold;
     }
 
-    .logo span {
-      color: #d62828;
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: white;
     }
 
+    .brand-text span {
+      color: var(--red);
+    }
+
+    .nav-right {
+      color: var(--green);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    /* ================= HERO ================= */
+
     .hero {
-      padding: 80px 0;
+      padding: 85px 0 90px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5f2ea 0%,
+          #fbfaf6 52%,
+          #e9eee9 100%
+        );
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 65px;
       align-items: center;
     }
 
     .badge {
-      display: inline-block;
-      padding: 8px 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 16px;
+
       border-radius: 30px;
-      background: #fff;
-      border: 1px solid #ddd;
+
+      background: white;
+      border: 1px solid var(--line);
+
+      color: var(--green-dark);
+
+      font-size: 14px;
       font-weight: bold;
-      margin-bottom: 20px;
+
+      margin-bottom: 22px;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    }
+
+    .badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
     }
 
     h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin: 0 0 20px;
+      font-size: clamp(44px, 6vw, 66px);
+      line-height: 1.05;
+
+      letter-spacing: -1.5px;
+
+      margin: 0 0 22px;
+
+      color: var(--black);
     }
 
     h1 span {
-      color: #d62828;
+      color: var(--red);
     }
 
     .intro {
       font-size: 19px;
-      color: #4b5563;
+      color: var(--black-soft);
+
       max-width: 650px;
+
+      margin: 0;
     }
+
+    /* ================= BUTTONS ================= */
 
     .buttons {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 30px;
+
+      margin-top: 32px;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 22px;
+
+      padding: 13px 23px;
+
       border-radius: 10px;
+
       text-decoration: none;
+
       font-weight: bold;
-      border: 1px solid #ccc;
+
+      border: 1px solid var(--line);
+
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-red {
-      background: #d62828;
+      background: var(--red);
       color: white;
-      border-color: #d62828;
+
+      border-color: var(--red);
+
+      box-shadow: 0 8px 20px rgba(178,31,45,0.20);
+    }
+
+    .btn-red:hover {
+      background: var(--red-dark);
     }
 
     .btn-light {
       background: white;
-      color: #1c2128;
+      color: var(--green-dark);
+
+      border-color: #cfc8b8;
     }
+
+    .btn-light:hover {
+      border-color: var(--green);
+    }
+
+    /* ================= PROFILE ================= */
 
     .profile-card {
       background: white;
+
       padding: 18px;
+
       border-radius: 24px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+
+      border: 1px solid rgba(40,89,67,0.18);
+
+      box-shadow: var(--shadow);
+
       text-align: center;
+
+      position: relative;
+    }
+
+    .profile-card::before {
+      content: "";
+
+      display: block;
+
+      height: 5px;
+
+      width: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--black) 0 33%,
+          var(--red) 33% 66%,
+          var(--gold) 66% 100%
+        );
+
+      border-radius: 10px;
+
+      margin-bottom: 15px;
     }
 
     .profile-card img {
       width: 100%;
-      max-width: 380px;
+
+      max-width: 400px;
+
+      max-height: 510px;
+
+      object-fit: cover;
+
       border-radius: 18px;
+
       display: block;
+
       margin: auto;
     }
 
     .profile-name {
-      font-size: 24px;
+      font-size: 25px;
+
       font-weight: bold;
+
       margin-top: 18px;
+
+      color: var(--black);
     }
 
     .profile-role {
-      color: #666;
+      color: var(--green);
+
+      font-size: 15px;
+
+      font-weight: 600;
+
+      margin-top: 3px;
     }
 
+    .profile-line {
+      width: 55px;
+      height: 3px;
+
+      background: var(--gold);
+
+      margin: 14px auto 0;
+
+      border-radius: 5px;
+    }
+
+    /* ================= SECTIONS ================= */
+
     section {
-      padding: 70px 0;
+      padding: 80px 0;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 40px;
+
+      margin-bottom: 42px;
     }
 
     .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 37px;
+
+      line-height: 1.2;
+
+      margin: 0 0 10px;
+
+      color: var(--black);
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .section-title p {
+      margin: 0;
+
+      color: var(--black-soft);
     }
 
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 18px;
-      border: 1px solid #e2e2e2;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
+    /* ================= ABOUT PGNX ================= */
 
     .about {
-      background: white;
+      background: var(--white);
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
     .about-box {
       max-width: 850px;
+
       margin: auto;
+
       text-align: center;
+
       font-size: 18px;
+
+      color: var(--black-soft);
     }
 
-    footer {
-      background: #1c2128;
-      color: white;
+    .about-box strong {
+      color: var(--green-dark);
+    }
+
+    /* ================= ABOUT UMER ================= */
+
+    .teacher-section {
+      background: var(--cream);
+    }
+
+    .teacher-box {
+      max-width: 850px;
+
+      margin: auto;
+
       text-align: center;
-      padding: 35px 0;
+
+      background: white;
+
+      border: 1px solid var(--line);
+
+      border-radius: 22px;
+
+      padding: 38px;
+
+      box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+    }
+
+    .teacher-box h3 {
+      margin-top: 0;
+
+      color: var(--red);
+
+      font-size: 26px;
+    }
+
+    .teacher-box p {
+      color: var(--black-soft);
+
+      font-size: 17px;
+    }
+
+    /* ================= CARDS ================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+
+      padding: 30px;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--line);
+
+      box-shadow: 0 7px 25px rgba(0,0,0,0.05);
+
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(40,89,67,0.35);
+
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon {
+      font-size: 27px;
+
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+
+      color: var(--green-dark);
+
+      font-size: 21px;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: var(--black-soft);
+    }
+
+    /* ================= START SECTION ================= */
+
+    .start-section {
+      background:
+        linear-gradient(
+          135deg,
+          var(--black),
+          #292e2b
+        );
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .start-section .section-title h2 {
+      color: white;
+    }
+
+    .start-section .section-title p {
+      color: #d6d8d5;
+    }
+
+    .start-section .btn-red {
+      background: var(--red);
+
+      border-color: var(--red);
+
+      box-shadow: none;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #151716;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 42px 0;
+
+      border-top: 4px solid var(--gold);
+    }
+
+    .footer-logo {
+      width: 58px;
+      height: 58px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      margin-bottom: 12px;
+
+      border: 2px solid var(--gold-soft);
+    }
+
+    footer strong {
+      color: var(--gold-soft);
     }
 
     footer .small {
-      color: #bbb;
+      color: #bfc3bf;
+
       margin-top: 8px;
+
+      font-size: 14px;
     }
 
+    /* ================= MOBILE ================= */
+
     @media (max-width: 800px) {
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
       .hero-grid {
         grid-template-columns: 1fr;
+
+        gap: 45px;
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 44px;
+      }
+
+      .intro {
+        font-size: 17px;
       }
 
       .cards {
@@ -206,63 +561,117 @@
 
       .profile-card {
         max-width: 500px;
+
         margin: auto;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .section-title h2 {
+        font-size: 31px;
+      }
+
+      .teacher-box {
+        padding: 28px 20px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
+
+<!-- ================= HEADER ================= -->
+
 <header>
+
   <div class="wrap">
+
     <div class="nav">
-      <div class="logo">
-        🇩🇪 <span>PGNX</span> · Deutsch A1
+
+      <div class="brand">
+
+        <img
+          src="pgnx-logo.jpg.jpeg"
+          alt="PGNX Logo"
+          class="brand-logo"
+        >
+
+        <div class="brand-text">
+          <span>PGNX</span> · Deutsch A1
+        </div>
+
       </div>
 
-      <div>
+      <div class="nav-right">
         Pak-German Nexus
       </div>
+
     </div>
+
   </div>
+
 </header>
 
 
-<!-- ================= HERO / HOME ================= -->
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
+
   <div class="wrap">
 
     <div class="hero-grid">
 
+
+      <!-- LEFT SIDE -->
+
       <div>
 
         <div class="badge">
+
+          <span class="badge-dot"></span>
+
           🇩🇪 PGNX · Deutsch Lernen
+
         </div>
 
+
         <h1>
+
           Hallo! Ich bin<br>
+
           <span>M. Umer</span>
+
         </h1>
 
+
         <p class="intro">
+
           Willkommen bei PGNX – einer digitalen Lernplattform
           für Deutschlernende. Hier kannst du Schritt für Schritt
           Deutsch lernen, üben und deinen Lernfortschritt verbessern.
+
         </p>
+
 
         <div class="buttons">
 
-          <!-- IMPORTANT: Agar Lesson 1 ki file ka naam different hai,
-               sirf neeche href mein woh naam likhna hai. -->
-
-          <a href="lesson-1.html" class="btn btn-red">
+          <a
+            href="lesson-1.html"
+            class="btn btn-red"
+          >
             🇩🇪 A1 Lernen starten
           </a>
 
-          <a href="#about" class="btn btn-light">
+
+          <a
+            href="#about"
+            class="btn btn-light"
+          >
             Über PGNX
           </a>
 
@@ -271,7 +680,8 @@
       </div>
 
 
-      <!-- ================= PROFILE ================= -->
+
+      <!-- RIGHT SIDE / PHOTO -->
 
       <div class="profile-card">
 
@@ -288,12 +698,17 @@
           German Language Instructor · PGNX
         </div>
 
+        <div class="profile-line"></div>
+
       </div>
+
 
     </div>
 
   </div>
+
 </section>
+
 
 
 <!-- ================= ABOUT PGNX ================= -->
@@ -303,28 +718,45 @@
   <div class="wrap">
 
     <div class="section-title">
+
       <h2>Über PGNX</h2>
-      <p>Pak-German Nexus · Deutsch lernen mit System</p>
+
+      <p>
+        Pak-German Nexus · Deutsch lernen mit System
+      </p>
+
     </div>
+
 
     <div class="about-box">
 
       <p>
+
         <strong>PGNX – Pak-German Nexus</strong> ist eine
         digitale Lernplattform für Menschen, die Deutsch lernen
         möchten.
+
       </p>
 
+
       <p>
+
         Die Plattform bietet strukturierte Deutschlektionen,
         Übungen, Wortschatz, Aussprache, Sprechen und praktische
         Aufgaben für Deutschlernende.
+
       </p>
 
+
       <p>
+
         Das Ziel ist einfach:
-        <strong>Deutsch verständlich, praktisch und Schritt für
-        Schritt zu lernen.</strong>
+
+        <strong>
+          Deutsch verständlich, praktisch und Schritt für
+          Schritt zu lernen.
+        </strong>
+
       </p>
 
     </div>
@@ -332,35 +764,53 @@
   </div>
 
 </section>
+
 
 
 <!-- ================= ABOUT UMER ================= -->
 
-<section>
+<section class="teacher-section">
 
   <div class="wrap">
 
     <div class="section-title">
-      <h2>Über mich</h2>
-      <p>Ihr Deutschlehrer bei PGNX</p>
-    </div>
 
-    <div class="about-box">
+      <h2>Über mich</h2>
 
       <p>
-        Ich bin <strong>M. Umer</strong>, German Language Instructor
-        und Gründer des PGNX-Lernprojekts.
+        Ihr Deutschlehrer bei PGNX
       </p>
 
+    </div>
+
+
+    <div class="teacher-box">
+
+      <h3>M. Umer</h3>
+
+
       <p>
+
+        Ich bin <strong>M. Umer</strong>, German Language Instructor
+        und Gründer des PGNX-Lernprojekts.
+
+      </p>
+
+
+      <p>
+
         Mein Ziel ist es, Deutschlernenden eine einfache,
         strukturierte und praktische Möglichkeit zu geben,
         Deutsch zu lernen und regelmäßig zu üben.
+
       </p>
 
+
       <p>
+
         Auf PGNX findest du verschiedene Lektionen,
         Lernmaterialien und Übungen für deine Deutschreise.
+
       </p>
 
     </div>
@@ -368,6 +818,7 @@
   </div>
 
 </section>
+
 
 
 <!-- ================= WHAT STUDENTS FIND ================= -->
@@ -378,7 +829,9 @@
 
     <div class="section-title">
 
-      <h2>Was findest du hier?</h2>
+      <h2>
+        Was findest du hier?
+      </h2>
 
       <p>
         Alles, was du für deinen Deutschlernweg brauchst.
@@ -389,31 +842,68 @@
 
     <div class="cards">
 
+
       <div class="card">
-        <h3>📚 Deutschlektionen</h3>
+
+        <div class="card-icon">
+          📚
+        </div>
+
+        <h3>
+          Deutschlektionen
+        </h3>
+
         <p>
+
           Strukturierte A1-Lektionen mit wichtigen Themen
           für den Alltag.
+
         </p>
+
       </div>
 
 
+
       <div class="card">
-        <h3>🗣️ Sprechen</h3>
+
+        <div class="card-icon">
+          🗣️
+        </div>
+
+        <h3>
+          Sprechen
+        </h3>
+
         <p>
+
           Praktische Übungen, damit du Deutsch aktiv
           sprechen kannst.
+
         </p>
+
       </div>
+
 
 
       <div class="card">
-        <h3>✏️ Übungen</h3>
+
+        <div class="card-icon">
+          ✏️
+        </div>
+
+        <h3>
+          Übungen
+        </h3>
+
         <p>
+
           Interaktive Aufgaben helfen dir dabei,
           deine Kenntnisse zu verbessern.
+
         </p>
+
       </div>
+
 
     </div>
 
@@ -422,23 +912,33 @@
 </section>
 
 
+
 <!-- ================= START LEARNING ================= -->
 
-<section>
+<section class="start-section">
 
   <div class="wrap">
 
     <div class="section-title">
 
-      <h2>Bereit zu lernen?</h2>
+      <h2>
+        Bereit zu lernen?
+      </h2>
 
       <p>
         Starte jetzt deine Deutsch-A1-Reise mit PGNX.
       </p>
 
-      <div class="buttons" style="justify-content:center;">
 
-        <a href="lesson-1.html" class="btn btn-red">
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
+
+        <a
+          href="lesson-1.html"
+          class="btn btn-red"
+        >
           🇩🇪 Zur ersten Lektion
         </a>
 
@@ -451,27 +951,48 @@
 </section>
 
 
+
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
   <div class="wrap">
 
+    <img
+      src="pgnx-logo.jpg.jpeg"
+      alt="PGNX Logo"
+      class="footer-logo"
+    >
+
+
     <div>
-      🇩🇪🇵🇰 <strong>PGNX · Pak-German Nexus</strong>
+
+      🇩🇪🇵🇰
+
+      <strong>
+        PGNX · Pak-German Nexus
+      </strong>
+
     </div>
 
+
     <div class="small">
+
       M. Umer · German Language Instructor · PGNX
+
     </div>
 
+
     <div class="small">
+
       Deutsch lernen · Üben · Fortschritt machen
+
     </div>
 
   </div>
 
 </footer>
+
 
 </body>
 </html>
